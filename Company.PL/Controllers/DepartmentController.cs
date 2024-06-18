@@ -13,7 +13,8 @@ namespace Company.PL.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var department = _repository.GetAll();
+            return View(department);
         }
     }
 }
